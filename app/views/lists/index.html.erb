@@ -1,0 +1,11 @@
+<h1>Movie Lists</h1>
+
+<div id=list>
+  <ol>
+    <% @lists.each do |list| %>
+      <li><%= list.name %></li>
+    <% end %>
+  </ol>
+</div>
+
+<%= link_to 'Create New', new_list_path %>
