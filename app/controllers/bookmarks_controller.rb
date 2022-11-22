@@ -10,6 +10,7 @@ class BookmarksController < ApplicationController
     @bookmark = Bookmark.new
   end
 
+  # POST /lists/:list_id/bookmarks
   def create
     @list = List.find(params[:list_id])
     @bookmark = Bookmark.new(bookmark_params)

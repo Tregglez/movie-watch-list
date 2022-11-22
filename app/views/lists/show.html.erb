@@ -5,9 +5,10 @@
   <% @list.bookmarks.each do |bookmark| %>
     <li class="list-group-item">
       <%= bookmark.comment %>
+      <%# list_bookmark_path(bookmark.list, bookmark) %>
       <%= link_to bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
         <i class="fa-regular fa-trash-can"></i>
-        <% end %>
+      <% end %>
     </li>
   <% end %>
 <%= link_to 'Add Movie', new_list_bookmark_path(@list) %>
