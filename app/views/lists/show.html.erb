@@ -1,0 +1,16 @@
+<h1>Lists</h1>
+
+<p><strong>Bookmarks</strong></p>
+<ul class="list-group">
+  <% @list.bookmarks.each do |bookmark| %>
+    <li class="list-group-item">
+      <%= bookmark.comment %>
+      <%= link_to bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+        <i class="fa-regular fa-trash-can"></i>
+        <% end %>
+    </li>
+  <% end %>
+<%= link_to 'Add Movie', new_list_bookmark_path(@list) %>
+</ul>
+<br>
+<%= link_to 'Home', root_path %>
