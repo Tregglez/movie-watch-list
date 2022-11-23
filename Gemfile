@@ -65,6 +65,9 @@ group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end
+
+gem 'dotenv-rails', groups: [:development, :test]
+
 gem 'rest-client'
 gem 'dotenv-rails'
 
