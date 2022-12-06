@@ -1,11 +1,14 @@
-<h1>Movie Lists</h1>
-
-<div id=list>
-  <ol>
-    <% @lists.each do |list| %>
-      <li><%= link_to list.name, list_path(list) %></li>
-    <% end %>
-  </ol>
+<div class='title-bracket'>
+  <div class="container">
+    <h1>Movie Lists</h1>
+    <p>Browse some movie lists, or create your own!</p>
+  </div>
 </div>
 
 <%= link_to 'Create New', new_list_path %>
+
+<div class="list-container">
+  <% @lists.each do |list| %>
+    <%= link_to list.name, list_path(list), class: "list-group" %>
+  <% end %>
+</div>

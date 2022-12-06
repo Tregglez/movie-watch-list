@@ -1,9 +1,9 @@
 <h1>Bookmarks</h1>
 
 <div>
-  <% @bookmarks.each do |b| %>
+  <% @bookmarks.each do |bookmark| %>
   <%= render bookmark%>
   <% end %>
 </div>
 
-<%= link_to 'New', new_bookmark_path %>
+<%= link_to 'New', new_list_bookmark_path %>

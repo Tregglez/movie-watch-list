@@ -67,9 +67,7 @@ group :development do
 end
 
 gem 'dotenv-rails', groups: [:development, :test]
-
-gem 'rest-client'
-gem 'dotenv-rails'
+gem 'cloudinary', '~>1.12.0'
 
 gem 'rspec-rails', group: [ :test ]
 gem 'rails-controller-testing', group: [ :test ]
